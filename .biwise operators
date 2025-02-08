@@ -1,0 +1,20 @@
+Multiplying by 3.5 using bitwise operators
+#include <stdio.h>
+
+int main() {
+     int n;
+     scanf("%d",&n);
+    int result=((n<<2)-n)+(n>>1);
+   printf("%d",result);
+}
+
+Set right most Unset bit
+#include <stdio.h>
+
+int main() {
+       int n;
+       scanf("%d",&n);
+    int result=(n)|(n+1);
+    printf("%d",result);
+   
+}
