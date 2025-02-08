@@ -1,0 +1,35 @@
+An Amrstrong number is a number that is equal to the sum of its own digits each raised to the power of the number of digits.
+#include <stdio.h>
+#include<math.h>
+
+int main() {
+         int n;
+    scanf("%d",&n);
+    int r=n;
+    int k=n;
+    int reverse=0;
+    
+    if(n<0){
+       printf("NO");
+        return 0;
+    }
+    int count=0;
+       while(k!=0){
+           count++;
+           k=k/10;
+       } 
+    
+    
+      for(;r!=0;){
+          int i=r%10;
+          reverse=reverse+pow(i,count);
+          r=r/10;
+      }
+    if(reverse==n){
+        printf("YES");
+    }
+    else{
+      printf("NO");  
+    }
+   
+}
