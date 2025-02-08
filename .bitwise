@@ -1,0 +1,16 @@
+Bitwise_Check if Two Numbers are Complementary
+#include <stdio.h>
+
+int main() {
+      int a,b;
+      scanf("%d %d",&a,&b);
+      int c=(a>>31)&1;
+      int d=(b>>31)&1;
+     int result=c^d;
+    if(result&1){
+        printf("YES");
+    }
+    else {
+        printf("NO");
+    }
+}
