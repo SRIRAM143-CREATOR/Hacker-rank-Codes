@@ -1,0 +1,20 @@
+Find Automorphic Number 
+int main() {
+   int n;
+    scanf("%d",&n);
+    int r=n;
+    int result=n*n;
+    int count=0;
+    while(r!=0){
+        count++;
+        r=r/10;
+    }
+    int total=pow(10,count);
+     int d=result%total;
+     if(d==n){
+         printf("%d is automorphic",n);
+     }
+    else{
+        printf("%d is not automorphic",n);
+    }
+}
