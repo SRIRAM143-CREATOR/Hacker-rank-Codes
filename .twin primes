@@ -1,0 +1,39 @@
+A twin prime pair is defined as two prime numbers (p, q) where:
+
+p and q are both prime numbers.
+q = p + 2, i.e., the two primes differ by exactly 2.
+(p, q) and (q, p) should be counted as the same pair, so you should only count one of them.
+#include <stdio.h>
+int main() {
+    int  n;
+    scanf("%d",&n);
+    int k=0;
+    int count=0;
+    for(int i=2;i<=n;i++){
+      int flag=0;
+        for(int j=2;j*j<=i;j++){
+            if(i%j==0){
+           flag=1;
+            break;
+        }
+        }
+        if(flag==0){
+            k=i+2;
+            int flag2=0;
+            for(int j=2;j*j<=k;j++){
+                if(k%j==0 && k<=n){
+                    flag2=1;
+                    break;
+                }
+            }
+            if(flag2==0 && k<=n){
+                count++;
+               
+            }
+        }
+    }
+    
+     printf("%d",count);
+    
+   
+}
