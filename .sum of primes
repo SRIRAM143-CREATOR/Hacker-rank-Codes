@@ -1,0 +1,27 @@
+Given an integer N, calculate the sum of the first N prime numbers.
+#include <stdio.h>
+
+int main() {
+     int n;
+    scanf("%d",&n);
+    int num=1;
+    int count=1;
+    int sum=0;
+    while(n>=count){
+        num++;
+        int flag=0;
+        for(int i=2;i*i<=num;i++){
+           if(num%i==0){
+               flag=1;
+              break;
+           }
+        }
+           if(flag==0){
+              sum=sum+num;
+               count++;      
+
+           } 
+            
+        }
+         printf("%d",sum);   
+    }
