@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d",&n);
+    
+    int d=0;
+    for(int i=1;i<=n;i++){
+    for(int j=1;j<=n;j++){
+     int a=i;
+         int b=j;
+        if(a<b){
+            d=i;
+        }
+        else{
+            d=j;
+        }
+         printf("%d ",n+1-d);
+        
+      }
+        int max=0;
+        for(int k=n-1;k>=1;k--){
+             int a=i;
+            int b=k;
+            if(a<b){
+              max=i;  
+            }
+            else{
+                max=k;
+            }
+            printf("%d ",n+1-max);
+        }
+          printf("\n");
+    }
+    int min=0;
+    for(int i=n-1;i>=1;i--){
+        for(int j=1;j<=n;j++ ){
+          int a=i;
+            int b=j;
+            if(a<b){
+             min=i;    
+            }
+            else{
+                min=j;
+            }
+             printf("%d ",n+1-min);
+        }
+        int x=0;
+        for(int k=n-1;k>=1;k--){
+            int a=i;
+            int b=k;
+            if(a<b){
+                x=i;
+            }
+            else{
+                x=k;
+            }
+             printf("%d ",n+1-x);
+        }
+        printf("\n");
+    }
+     
+return 0;
+}
