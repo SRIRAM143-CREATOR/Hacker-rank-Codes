@@ -1,0 +1,37 @@
+A Disarium number is a number where the sum of its digits powered by their position (starting from the leftmost digit, with the first position as 1) equals the number itself.
+
+Write a function is_disarium_number(n) that returns 1 if the number n is a Disarium number and 0 otherwise.
+
+Function Signature
+#include <stdio.h>
+#include<math.h>
+int is_disarium_number(int n) {
+    int k=n;
+     
+    int r=n;
+    int count=0;
+   while(k!=0){
+     k=k/10;
+       count++;
+       }
+       int sum=0;
+    while(r!=0){
+        int reverse=r%10;
+        sum=sum+pow(reverse,count);
+        count--;
+        r=r/10;
+    }
+    if(sum==n){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    printf("%d\n", is_disarium_number(n));
+    return 0;
+}
